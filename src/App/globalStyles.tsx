@@ -1,11 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
-import { ThemeColors } from '../common/logic/theme';
 
-export const GlobalStyle = createGlobalStyle<Partial<ThemeColors>>`
+export const GlobalStyle = createGlobalStyle`
   :root {
-    --primary-color: ${(props) => props.primary};
-    --secondary-color: ${(props) => props.secondary}
+    --primary-color: #ddd;
+    --secondary-color: #222;
   }
+  
   
   *, *::before, *::after {
     box-sizing: border-box;
