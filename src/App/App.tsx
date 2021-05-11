@@ -19,11 +19,11 @@ const ClockItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 1em;
 
   &.analog {
     aspect-ratio: 1 / 1;
     max-width: 80vw;
+
     @supports not (aspect-ratio: 1 / 1) {
       width: min(320px, 80vw);
       height: min(320px, 80vw);

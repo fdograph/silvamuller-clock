@@ -55,18 +55,8 @@ const ClockSvg = styled.svg`
 export const AnalogClock: React.FC = () => {
   const { date } = useTickerInSeconds(1);
 
-  console.log({
-    hours: date.getHours(),
-    minutes: date.getMinutes(),
-    seconds: date.getSeconds(),
-  });
-
   const lines = [...new Array(60)].map((_, i) => {
-    let size = 3;
-
-    if (i % 5 === 0) {
-      size = 8;
-    }
+    const size = i % 5 === 0 ? 8 : 3;
 
     return (
       <line
