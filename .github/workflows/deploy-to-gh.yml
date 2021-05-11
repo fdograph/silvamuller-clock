@@ -16,6 +16,8 @@ jobs:
         with:
           node-version: '14.x'
       - run: yarn
+      - run: git config --global user.name "${{secrets.GH_NAME}}"
+      - run: git config --global user.email "${{secrets.GH_EMAIL}}"
       - run: git remote set-url origin https://${{secrets.GH_ACCESS_TOKEN}}@github.com/${{secrets.GH_USERNAME}}/silvamuller-clock.git
       - run: yarn build
       - run: yarn deploy
