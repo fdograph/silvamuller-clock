@@ -1,6 +1,6 @@
 
 
-# It's a Clock 🕐
+# It's a DigitalClock 🕐
 
 Check it out! [https://clock.silvamuller.rocks](https://clock.silvamuller.rocks)
 
