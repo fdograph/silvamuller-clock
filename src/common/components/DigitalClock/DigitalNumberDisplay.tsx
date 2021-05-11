@@ -89,7 +89,7 @@ export const DigitalNumberDisplay: React.FC<IDigitalNumberDisplayProps> = ({
           </Item>
         );
       }),
-    [size, value]
+    [animated, padding, size, value]
   );
 
   return (
