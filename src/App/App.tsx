@@ -3,6 +3,8 @@ import { GlobalStyle } from './globalStyles';
 import styled from 'styled-components';
 import { AnalogClock } from '../common/components/AnalogClock/AnalogClock';
 import { DigitalClock } from '../common/components/DigitalClock/DigitalClock';
+import { useTickerInSeconds } from '../hooks';
+import { Clock } from '../common/components/Clock';
 
 const MainWrapper = styled.main`
   display: flex;
@@ -36,15 +38,17 @@ const ClockItem = styled.div`
 `;
 
 const App: React.FC = () => {
+  const { date } = useTickerInSeconds(1);
+
   return (
     <Fragment>
       <GlobalStyle />
       <MainWrapper>
         <ClockItem className="analog">
-          <AnalogClock />
+          <Clock type={AnalogClock} date={date} auto={false} />
         </ClockItem>
         <ClockItem className="digital">
-          <DigitalClock />
+          <Clock type={DigitalClock} date={date} auto={false} />
         </ClockItem>
       </MainWrapper>
     </Fragment>

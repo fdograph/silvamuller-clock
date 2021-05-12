@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useTickerInSeconds } from '../../../hooks';
 import { DigitalNumberDisplay } from './DigitalNumberDisplay';
+import { IClockProps } from '../types';
 
 const ClockWrapper = styled.div`
   display: flex;
@@ -32,9 +32,7 @@ const ClockWrapper = styled.div`
   }
 `;
 
-export const DigitalClock: React.FC = () => {
-  const { date } = useTickerInSeconds(1);
-
+export const DigitalClock: React.FC<IClockProps> = ({ date }) => {
   return (
     <ClockWrapper>
       <DigitalNumberDisplay

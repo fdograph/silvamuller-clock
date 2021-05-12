@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import classnames from 'classnames';
-import { useTickerInSeconds } from '../../../hooks';
+import { IClockProps } from '../types';
 
 const timeToRotation = (t: number, chunks: number) => {
   return (360 / chunks) * t;
@@ -52,9 +52,7 @@ const ClockSvg = styled.svg`
   }
 `;
 
-export const AnalogClock: React.FC = () => {
-  const { date } = useTickerInSeconds(1);
-
+export const AnalogClock: React.FC<IClockProps> = ({ date }) => {
   const lines = [...new Array(60)].map((_, i) => {
     const size = i % 5 === 0 ? 8 : 3;
 
