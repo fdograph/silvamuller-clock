@@ -15,6 +15,7 @@ const ClockWrapper = styled.div`
   justify-content: center;
 
   min-width: 160px;
+  max-width: 300px;
 `;
 
 const ClockSvg = styled.svg`
